@@ -154,3 +154,8 @@ C:\Dev\Desenvolvedor\EFC\obj\Debug\net10.0\refint\EFC.dll
 C:\Dev\Desenvolvedor\EFC\obj\Debug\net10.0\EFC.pdb
 C:\Dev\Desenvolvedor\EFC\obj\Debug\net10.0\EFC.genruntimeconfig.cache
 C:\Dev\Desenvolvedor\EFC\obj\Debug\net10.0\ref\EFC.dll
+C:\Dev\Desenvolvedor\efc\bin\Debug\net10.0\Microsoft.Extensions.Configuration.dll
+C:\Dev\Desenvolvedor\efc\bin\Debug\net10.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\Dev\Desenvolvedor\efc\bin\Debug\net10.0\Microsoft.Extensions.Logging.Configuration.dll
+C:\Dev\Desenvolvedor\efc\bin\Debug\net10.0\Microsoft.Extensions.Logging.Console.dll
+C:\Dev\Desenvolvedor\efc\bin\Debug\net10.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll

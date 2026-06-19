@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Dev\\Desenvolvedor\\efc\\EFC.csproj": {}
+    "C:\\Dev\\Desenvolvedor\\EFC\\EFC.csproj": {}
   },
   "projects": {
-    "C:\\Dev\\Desenvolvedor\\efc\\EFC.csproj": {
+    "C:\\Dev\\Desenvolvedor\\EFC\\EFC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Dev\\Desenvolvedor\\efc\\EFC.csproj",
+        "projectUniqueName": "C:\\Dev\\Desenvolvedor\\EFC\\EFC.csproj",
         "projectName": "EFC",
-        "projectPath": "C:\\Dev\\Desenvolvedor\\efc\\EFC.csproj",
+        "projectPath": "C:\\Dev\\Desenvolvedor\\EFC\\EFC.csproj",
         "packagesPath": "C:\\Users\\victor.macena\\.nuget\\packages\\",
-        "outputPath": "C:\\Dev\\Desenvolvedor\\efc\\obj\\",
+        "outputPath": "C:\\Dev\\Desenvolvedor\\EFC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

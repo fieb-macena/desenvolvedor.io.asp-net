@@ -2,6 +2,7 @@ using EFC.Data.Configuration;
 using EFC.Domain;
 using EFC.ValueObjects;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.Extensions.Logging;
 
 namespace EFC.Data;
@@ -18,15 +19,30 @@ public class ApplicationContext : DbContext
         optionsBuilder
             .UseLoggerFactory(_logger)
             .EnableSensitiveDataLogging()
-            .UseSqlServer("Data source=(localdb)\\MSSQLLocalDB;Initial Catalog=EFC;Integrated Security=true");
+            .UseSqlServer("Data source=(localdb)\\MSSQLLocalDB;Initial Catalog=EFC;Integrated Security=true",
+                p=>p.EnableRetryOnFailure(
+                    maxRetryCount: 2, 
+                    maxRetryDelay: TimeSpan.FromSeconds(5),
+                    errorNumbersToAdd: null
+                ).MigrationsHistoryTable("EFC"));
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         //modelBuilder.ApplyConfiguration(new ClienteConfiguration());
-
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationContext).Assembly);
     }
     
-    
+    private void MapearPropriedadesEsquecidas(ModelBuilder modelBuilder)
+    {
+        foreach(var entity in modelBuilder.Model.GetEntityTypes()){
+            var properties = entity.GetProperties().Where(p=>p.ClrType == typeof(string));
+
+            foreach(var property in properties)
+            {
+                if(string.IsNullOrEmpty(property.GetColumnType()) && !property.GetMaxLength().HasValue)
+                    property.SetColumnType("VARCHAR(100)");
+            }
+        }
+    }
 }
